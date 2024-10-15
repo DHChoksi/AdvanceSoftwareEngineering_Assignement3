@@ -1,0 +1,58 @@
+@startuml
+class Employee {
+    - String m_FirstName
+    - String m_LastName
+    - String m_SocialSecurityNumber
+    + Employee(String, String, String)
+    + getFirstName(): String
+    + setFirstName(String): void
+    + getLastName(): String
+    + setLastName(String): void
+    + getSocialSecurityNumber(): String
+    + setSocialSecurityNumber(String): void
+    + toString(): String
+}
+
+class SalariedEmployee extends Employee {
+    - double m_WeeklySalary
+    + SalariedEmployee(String, String, String, double)
+    + getWeeklySalary(): double
+    + setWeeklySalary(double): void
+    + toString(): String
+}
+
+class HourlyEmployee extends Employee {
+    - double m_Wage
+    - double m_HoursWorked
+    + HourlyEmployee(String, String, String, double, double)
+    + getWage(): double
+    + setWage(double): void
+    + getHoursWorked(): double
+    + serHoursWorked(double): void
+    + toString(): String
+}
+
+class CommissionEmployee extends Employee {
+    - double m_CommissionRate
+    - double m_GrossSales
+    + CommissionEmployee(String, String, String, double, double)
+    + getCommissionRate(): double
+    + setCommissionRate(double): void
+    + getGrossSales(): double
+    + setGrossSales(double): void
+    + toString(): String
+}
+
+class BaseEmployee extends Employee {
+    - double m_BaseSalary
+    + BaseEmployee(String, String, String, double)
+    + getBaseSalary(): double
+    + setBaseSalary(double): void
+    + toString(): String
+}
+
+Employee <|-- SalariedEmployee
+Employee <|-- HourlyEmployee
+Employee <|-- CommissionEmployee
+Employee <|-- BaseEmployee
+@enduml

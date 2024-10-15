@@ -1,0 +1,19 @@
+@startuml
+object "<u>pesseCanoe : Ship</u>" as ship1{
+    m_Name = "Pesse canoe"
+    m_YearBuilt = "7510"
+}
+
+object "<u>iconOfTheSeas:CruiseShip</u>" as ship2{
+    m_Name = "Royal Caribbean's Icon of the Seas"
+    m_YearBuilt = "2024"
+    m_MaxPassengers = 7600
+}
+
+object "<u>mscIrina:CargoShip</u>" as ship3{
+    m_Name = "MSC Irina"
+    m_YearBuilt = "2023"
+    m_CargoCapacity = 21710
+}
+
+@enduml
